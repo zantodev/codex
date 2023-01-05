@@ -25,7 +25,7 @@ app.post("/", async (req, res) => {
   try {
     const prompt = req.body.prompt;
 
-    const response = await openai.createCompletion({
+    const response = await openai.Completion.create({
       model: "text-davinci-003",
       prompt: `${prompt}`,
       temperature: 0, // Higher values means the model will take more risks.
